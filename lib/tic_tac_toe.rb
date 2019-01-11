@@ -128,5 +128,3 @@ def won?
     end
   end
 end
-
-end

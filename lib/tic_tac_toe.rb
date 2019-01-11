@@ -99,7 +99,7 @@ def won?
   end
 
    def draw?
-     puts draw?(board) ? "Cats Game!" : "Congratulations #{winner}!"
+     puts draw? ? "Cats Game!" : "Congratulations #{winner}!"
     # !won? && full?
   end
 

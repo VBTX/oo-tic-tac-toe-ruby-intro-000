@@ -114,7 +114,7 @@ def won?
     if win_combination = won?
       @board[win_combination[0]]
     else
-      return nil
+      nil
     end
   end
 

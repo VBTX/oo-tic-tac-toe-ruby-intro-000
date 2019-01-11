@@ -99,8 +99,11 @@ def won?
   end
 
    def draw?
-     puts draw? ? "Cats Game!" : "Congratulations #{winner}!"
-    # !won? && full?
+    if won?
+      false
+    elsif full?
+      true
+    end
   end
 
    def over?

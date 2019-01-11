@@ -62,10 +62,6 @@ def current_player
 end
 
 def won?
-  # board_empty = @board.none? { |i| i == "X" || i = "O"}
-  #   if board_empty
-  #     false
-  #   else
    WIN_COMBINATIONS.detect do |win_combination|
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]

@@ -96,10 +96,10 @@ def won?
   end
 
    def draw?
-    if won?
-      false
-    elsif full?
+    if full? && won?==false
       true
+    else
+      false
     end
   end
 

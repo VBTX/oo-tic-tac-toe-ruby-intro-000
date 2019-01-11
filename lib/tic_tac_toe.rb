@@ -96,7 +96,7 @@ def won?
   end
 
    def draw?
-    if won? 
+    if won?
       false
     elsif full?
       true

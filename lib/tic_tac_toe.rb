@@ -23,8 +23,8 @@ def display_board
   puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
 end
 
-def input_to_index(user_input)
-  index = user_input.to_i - 1
+def input_to_index(input)
+  index = input.to_i - 1
   @index = index
 end
 
@@ -40,6 +40,18 @@ def valid_move?(position)
 position.to_i.between?(0,8) && !position_taken?(position.to_i)
 end
 
+def turn
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(index)
+    move(index, current_player="X")
+  else
+    turn
+  end
+  display_board
+end
+
 def turn_count
   @board.count {|token| token == "X" || token == "O"}
 end
@@ -49,16 +61,6 @@ def current_player
 end
 
 
-def turn
-  puts "Please enter 1-9:"
-  input = gets.strip
-  if valid_move?(position)
-    move(index, current_player="X")
-  else
-    turn
-  end
-  display_board
-end
 
 
 def won?

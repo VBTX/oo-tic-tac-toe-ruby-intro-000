@@ -111,10 +111,10 @@ def won?
   end
 
    def winner
-    if win_combination = won?
+    if win_combination == won?
       @board[win_combination[0]]
     else
-      nil
+      return nil
     end
   end
 

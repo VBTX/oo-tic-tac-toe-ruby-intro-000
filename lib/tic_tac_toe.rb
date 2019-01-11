@@ -25,7 +25,7 @@ end
 
 def input_to_index(user_input)
   index = user_input.to_i - 1
-  index
+  @index = index
 end
 
 def move(index, current_player="X")

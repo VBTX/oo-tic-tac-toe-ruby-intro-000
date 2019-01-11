@@ -87,9 +87,6 @@ def won?
 
     end
 
-
-
-
   def full?
     if @board.detect {|i| i == " " || i == nil}
       false
@@ -99,7 +96,11 @@ def won?
   end
 
    def draw?
-    !won? && full?
+    if won? 
+      false
+    elsif full?
+      true
+    end
   end
 
    def over?
